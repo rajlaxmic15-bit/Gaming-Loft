@@ -28,7 +28,7 @@ export default function CTA() {
       (time ? `• *Preferred Time Slot:* ${time}\n` : "") +
       `\nPlease confirm my slot reservation. Thank you!`;
 
-    const receivingNumber = "917620969566";
+    const receivingNumber = "918262859258";
     const whatsappUrl = `https://wa.me/${receivingNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
