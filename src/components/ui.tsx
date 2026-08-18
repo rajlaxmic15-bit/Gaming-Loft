@@ -9,7 +9,7 @@ export function SectionHead({
   outline,
   right,
 }: {
-  kicker: string;
+  kicker?: string;
   lines: string[];
   outline?: boolean;
   right?: ReactNode;
@@ -17,12 +17,14 @@ export function SectionHead({
   return (
     <div className="mb-12 flex flex-col gap-8 md:mb-16 md:flex-row md:items-end md:justify-between">
       <Reveal>
-        <div className="font-hud text-neon text-xs tracking-[0.5em] md:text-sm">
-          <span className="text-neon/60">[ </span>
-          {kicker}
-          <span className="text-neon/60"> ]</span>
-        </div>
-        <h2 className="font-display mt-4 text-[13vw] leading-[0.9] tracking-tight text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl">
+        {kicker && (
+          <div className="font-hud text-neon text-xs tracking-[0.5em] md:text-sm mb-4">
+            <span className="text-neon/60">[ </span>
+            {kicker}
+            <span className="text-neon/60"> ]</span>
+          </div>
+        )}
+        <h2 className="font-display text-[13vw] leading-[0.9] tracking-tight text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl">
           {lines.map((l, i) => (
             <span key={i} className={cn("block", outline && i === lines.length - 1 && "text-outline")}>
               {l}

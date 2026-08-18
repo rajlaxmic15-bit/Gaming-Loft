@@ -97,7 +97,7 @@ export const STATS: Stat[] = [
   { value: 5, suffix: "+", label: "GAMES", sub: "Five arenas under one roof" },
   { value: 100, suffix: "%", label: "PREMIUM SETUP", sub: "Pro-grade gear, always" },
   { value: 40, suffix: "+", label: "MATCHES / WEEK", sub: "Competitive leagues & ladders" },
-  { value: 24, suffix: "/7", label: "ULTIMATE EXPERIENCE", sub: "Open all day. Every day." },
+  { value: 12, suffix: "+", label: "PRO TABLES", sub: "Championship setups" },
 ];
 
 export type Plan = {
@@ -233,3 +233,17 @@ export const NAV_LINKS = [
   { label: "GALLERY", href: "#gallery" },
   { label: "WHY US", href: "#why-us" },
 ];
+
+export const CONTACT_INFO = {
+  name: "The Gaming Loft",
+  tagline: "Play · Compete · Win",
+  address: "2nd Floor, Beside Kamal Medicos, Opposite Apollo Pharmacy, Khamla Main Road, Nagpur, Maharashtra – 440025",
+  shortAddress: "Khamla Main Road, Opposite Apollo Pharmacy, Nagpur",
+  city: "Nagpur, Maharashtra",
+  phone: "+91 82628 59258",
+  phoneRaw: "+918262859258",
+  timings: "10:30 AM – 11:30 PM (Daily)",
+  email: "thegamingloft.nagpur@gmail.com",
+  instagram: "@thegamingloft",
+  kheloMoreUrl: "https://www.khelomore.com/sports-venues/nagpur/the-gaming-loft--khamla-main-road/3270",
+};

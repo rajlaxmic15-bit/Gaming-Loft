@@ -13,11 +13,10 @@ export default function Experience() {
 
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHead
-          kicker="SEC.02 — THE EXPERIENCE"
           lines={["One place.", "Five ways to play."]}
           outline
           right={
-            <p className="font-hud max-w-sm text-sm leading-relaxed text-white/50">
+            <p className="font-hud max-w-sm text-sm leading-relaxed text-white">
               Hover or tap an arena to take over the screen. Five completely different
               battlegrounds — all under one roof, all running hot every single night.
             </p>

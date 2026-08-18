@@ -2,7 +2,7 @@ import { useRouter } from "../context/RouterContext";
 import { Corners, Reveal } from "./ui";
 
 interface PageHeaderProps {
-  sectionNum: string;
+  sectionNum?: string;
   tag: string;
   title: string;
   highlight: string;
@@ -10,7 +10,6 @@ interface PageHeaderProps {
 }
 
 export default function PageHeader({
-  sectionNum,
   tag,
   title,
   highlight,
@@ -52,12 +51,7 @@ export default function PageHeader({
         {/* Title & Description */}
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
           <Reveal delay={0.08}>
-            <div className="font-hud text-neon text-xs tracking-[0.5em] uppercase md:text-sm">
-              <span className="text-neon/60">[ </span>
-              {sectionNum} — {tag}
-              <span className="text-neon/60"> ]</span>
-            </div>
-            <h1 className="font-display mt-4 text-[13vw] leading-[0.88] tracking-tight text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="font-display text-[13vw] leading-[0.88] tracking-tight text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl">
               {title} <span className="text-neon glow-cyan">{highlight}</span>
             </h1>
           </Reveal>
@@ -70,7 +64,7 @@ export default function PageHeader({
               </p>
               <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3 font-hud text-[10px] tracking-[0.25em] text-white/40 uppercase">
                 <span>STATUS // ONLINE</span>
-                <span className="text-mint">● 24/7 ACTIVE</span>
+                <span className="text-mint">● ARENA ACTIVE</span>
               </div>
             </div>
           </Reveal>

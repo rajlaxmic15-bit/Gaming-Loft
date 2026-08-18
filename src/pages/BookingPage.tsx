@@ -17,13 +17,44 @@ export default function BookingPage() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    if (!name.trim() || !phone.trim() || !date || !time) {
+      return;
+    }
+
+    const selectedGameObj = GAMES.find((g) => g.id === selectedGame);
+    const gameName = selectedGameObj ? selectedGameObj.name : selectedGame.toUpperCase();
+
+    const squadSizes: Record<string, string> = {
+      "1": "1 Player (Solo)",
+      "2": "2 Players (Duo)",
+      "4": "4 Players (Squad)",
+      "8": "8 Players (Party)",
+      "12+": "12+ Players (Full Floor)",
+    };
+    const squadText = squadSizes[players] || `${players} Players`;
+
+    const message =
+      `*🎮 NEW SLOT RESERVATION — THE GAMING LOFT*\n\n` +
+      `*👤 Player Details:*\n` +
+      `• *Full Name:* ${name.trim()}\n` +
+      `• *Phone / WhatsApp Number:* ${phone.trim()}\n\n` +
+      `*🕹️ Booking Information:*\n` +
+      `• *Selected Game Arena:* ${gameName}\n` +
+      `• *Booking Date:* ${date}\n` +
+      `• *Preferred Time Slot:* ${time}\n` +
+      `• *Player Squad Size:* ${squadText}\n\n` +
+      `Please confirm my slot reservation. Thank you!`;
+
+    const receivingNumber = "917620969566";
+    const whatsappUrl = `https://wa.me/${receivingNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setSent(true);
   };
 
   return (
     <div className="relative min-h-screen bg-void text-white">
       <PageHeader
-        sectionNum="SEC.07"
         tag="RESERVE YOUR ARENA"
         title="Lock In Your"
         highlight="Game Slot"
@@ -45,7 +76,7 @@ export default function BookingPage() {
                     Slot <span className="text-mint">Confirmed!</span>
                   </h3>
                   <p className="font-hud text-sm text-white/60 max-w-md mt-3">
-                    Thank you {name || "Gamer"}! We have reserved your {selectedGame.toUpperCase()} table on {date} at {time}. A confirmation has been sent to your WhatsApp ({phone || "+91 98765 43210"}).
+                    Thank you {name || "Gamer"}! We have reserved your {selectedGame.toUpperCase()} table on {date} at {time}. A confirmation has been sent to your WhatsApp ({phone || "+91 82628 59258"}).
                   </p>
                   <div className="mt-8 flex gap-4">
                     <button
@@ -152,7 +183,7 @@ export default function BookingPage() {
                       </label>
                       <input
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 82628 59258"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         required

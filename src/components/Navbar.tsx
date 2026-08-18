@@ -49,11 +49,14 @@ export default function Navbar() {
         {/* top HUD strip */}
         <div className="hidden items-center justify-between border-b border-white/5 px-6 py-1.5 font-hud text-[10px] tracking-[0.3em] text-white/40 uppercase lg:flex">
           <span>
-            <span className="text-neon">●</span> OPEN NOW — 24 / 7
+            <span className="text-neon">●</span> 10:30 AM – 11:30 PM — DAILY
           </span>
-          <span>THE GAMING LOFT — PREMIUM GAMING LOUNGE</span>
+          <span>THE GAMING LOFT — KHAMLA MAIN ROAD, NAGPUR</span>
           <span>
-            +91 98765 43210 <span className="text-neon/70">//</span> BOOKINGS
+            <a href="tel:+918262859258" className="hover:text-neon transition-colors">
+              +91 82628 59258
+            </a>{" "}
+            <span className="text-neon/70">//</span> BOOKINGS
           </span>
         </div>
 

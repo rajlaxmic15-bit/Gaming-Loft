@@ -8,7 +8,6 @@ export default function WhyUs() {
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <SectionHead
-          kicker="SEC.06 — WHY US"
           lines={["Not just a game."]}
           outline
         />
@@ -20,7 +19,7 @@ export default function WhyUs() {
               <p className="font-display text-[13vw] leading-[0.9] text-white uppercase sm:text-6xl md:text-7xl">
                 It's an <span className="text-outline">experience.</span>
               </p>
-              <p className="font-hud mt-6 max-w-sm text-sm leading-relaxed text-white/50">
+              <p className="font-hud mt-6 max-w-sm text-sm leading-relaxed text-white">
                 Anyone can put a pool table in a room. We built a place that makes you
                 want to come back every night. Here's what separates the Loft from the rest.
               </p>

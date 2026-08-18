@@ -86,24 +86,24 @@ const EXPERIENCE_DETAILS = [
 
 const LOUNGE_AMENITIES = [
   {
-    title: "24/7 Non-Stop Access",
-    desc: "Open round the clock every day. From late-night afterparties to early morning practice drills.",
-    icon: "⏱",
+    title: "100% Power Backup",
+    desc: "Uninterrupted gaming with instant automatic power backup — your match never stops mid-frame or mid-game.",
+    icon: "⚡",
   },
   {
-    title: "Craft Fuel Bar & Cafe",
-    desc: "Artisanal iced coffees, fresh mocktails, energy shakes, and gourmet bites delivered right to your table.",
-    icon: "☕",
+    title: "Dedicated Parking & Easy Access",
+    desc: "Convenient parking for bikes and cars right at Khamla Main Road, directly opposite Apollo Pharmacy.",
+    icon: "🚗",
   },
   {
-    title: "Acoustic Sound Architecture",
-    desc: "Curated playlists spanning synthwave, lo-fi beats, and dark electro calibrated for supreme focus and hype.",
-    icon: "🔊",
+    title: "Chilled Refreshments & Snacks",
+    desc: "Energy drinks, cold sodas, packaged beverages, and hot snacks delivered straight to your playing station.",
+    icon: "🥤",
   },
   {
-    title: "Weekly Leagues & Tournaments",
-    desc: "Compete in 8-Ball Friday Shootouts, FIFA weekend derbies, and TT ladder challenges for cash prizes and trophies.",
-    icon: "🏆",
+    title: "Clean Facilities & Pure Water",
+    desc: "Spotless hygienic washrooms, air-conditioned comfort, and purified drinking water available for all guests.",
+    icon: "💧",
   },
 ];
 
@@ -115,7 +115,6 @@ export default function ExperiencePage() {
   return (
     <div className="relative min-h-screen bg-void text-white">
       <PageHeader
-        sectionNum="SEC.02"
         tag="THE EXPERIENCE"
         title="Immerse In The"
         highlight="Loft Culture"

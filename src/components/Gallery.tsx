@@ -9,11 +9,10 @@ export default function Gallery() {
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <SectionHead
-          kicker="SEC.05 — GALLERY"
           lines={["Inside the loft."]}
           outline
           right={
-            <p className="font-hud max-w-sm text-sm leading-relaxed text-white/50">
+            <p className="font-hud max-w-sm text-sm leading-relaxed text-white">
               No renders. No stock fantasy. This is the actual venue — shot on an average
               Saturday, mid-competition.
             </p>

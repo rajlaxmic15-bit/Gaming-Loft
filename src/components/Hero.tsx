@@ -55,15 +55,15 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease }}
-          className="font-display text-[16vw] leading-[0.85] tracking-tight text-white uppercase sm:text-8xl md:text-9xl lg:text-[11rem]"
+          className="font-display text-[13.5vw] leading-[0.88] tracking-tight text-white uppercase sm:text-7xl md:text-8xl lg:text-[9.5rem]"
         >
           <span className="block">
             Play. <span className="text-neon glow-cyan">Compete.</span>
           </span>
-          <span className="text-outline-solid block text-[9vw] sm:text-6xl md:text-8xl lg:text-9xl">
+          <span className="text-outline-solid block text-[7.5vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             Experience the
           </span>
-          <span className="block text-[9vw] sm:text-6xl md:text-8xl lg:text-9xl">
+          <span className="block text-[7.5vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             Difference<span className="text-neon">.</span>
           </span>
         </motion.h1>
@@ -72,7 +72,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35, ease }}
-          className="font-hud mx-auto mt-8 max-w-xl text-sm leading-relaxed text-white/60 md:text-base"
+          className="font-hud mx-auto mt-8 max-w-xl text-sm leading-relaxed text-white md:text-base"
         >
           Pool · Snooker · Table Tennis · Foosball · PS5 — one loft, five arenas and an
           atmosphere built for champions. Lock in your session before the tables go hot.
@@ -106,7 +106,7 @@ export default function Hero() {
             ["GAMES", "05+"],
             ["TABLES LIVE", "12"],
             ["PLAYERS TONIGHT", "86"],
-            ["OPEN", "24/7"],
+            ["RATING", "4.9 ★"],
           ].map(([label, val], i) => (
             <div key={label} className="flex items-center justify-between px-6 py-4">
               <span className="font-hud text-[10px] tracking-[0.35em] text-white/40 uppercase">{label}</span>

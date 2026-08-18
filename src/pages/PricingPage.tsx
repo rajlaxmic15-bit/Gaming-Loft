@@ -30,7 +30,7 @@ const SPECIAL_PASSES = [
     tag: "30-DAY ALL ACCESS",
     price: "₹4,999",
     per: "/ MONTH",
-    desc: "Personal cue locker, 24/7 priority table reservations, 20% cafe discount, and free guest passes.",
+    desc: "Personal cue locker, VIP priority table reservations, 20% cafe discount, and free guest passes.",
     color: "#b4ff39",
     badge: "ELITE STATUS",
   },
@@ -62,8 +62,7 @@ export default function PricingPage() {
   return (
     <div className="relative min-h-screen bg-void text-white">
       <PageHeader
-        sectionNum="SEC.04"
-        tag="PRICING & PASSES"
+        tag="PRICING & MEMBERSHIP"
         title="Transparent HUD"
         highlight="Battle Passes"
         description="Zero hidden charges, zero sign-up friction. Choose your hourly session or pick an all-night unrestricted pass with pro locker access."

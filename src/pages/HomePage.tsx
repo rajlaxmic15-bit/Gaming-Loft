@@ -14,7 +14,7 @@ export default function HomePage() {
 
       {/* ticker divider */}
       <Marquee
-        items={["One Place", "Five Ways To Play", "Open 24/7", "Pool · Snooker · TT · Foosball · PS5"]}
+        items={["One Place", "Five Ways To Play", "Tournament Grade", "Pool · Snooker · TT · Foosball · PS5"]}
       />
 
       <Experience />

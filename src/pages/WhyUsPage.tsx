@@ -14,9 +14,9 @@ const EXPANDED_PILLARS = [
   },
   {
     num: "02",
-    title: "24/7 OPEN NON-STOP TIMINGS",
-    badge: "ROUND THE CLOCK",
-    desc: "Gaming has no curfew. Whether you're wrapping up a late-night work shift at 2 AM, looking for an intense weekend midnight duel, or getting morning practice rounds before work, The Gaming Loft is fully operational 24 hours a day, 365 days a year.",
+    title: "EXTENDED GAMING TIMINGS",
+    badge: "DAILY ACCESS",
+    desc: "Gaming on your schedule. Whether you're wrapping up work, looking for an intense weekend duel, or getting morning practice rounds in, The Gaming Loft is fully operational with staffed tables and cafe service.",
     highlight: "Security, cafe service, and tables always staffed.",
   },
   {
@@ -45,7 +45,7 @@ const EXPANDED_PILLARS = [
 const FAQS = [
   {
     q: "Do I need to book in advance or can I walk in?",
-    a: "Walk-ins are always welcome 24/7! However, during peak hours (Friday evenings and weekends 6 PM - 11 PM), tables fill up fast, so we strongly recommend reserving your slot online or via WhatsApp to guarantee zero waiting time.",
+    a: "Walk-ins are always welcome! However, during peak hours (Friday evenings and weekends 6 PM - 11 PM), tables fill up fast, so we strongly recommend reserving your slot online or via WhatsApp to guarantee zero waiting time.",
   },
   {
     q: "Can we bring our own cue sticks or controllers?",
@@ -67,7 +67,7 @@ const FAQS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Hands down the best gaming lounge in the city. The snooker baize is immaculate and the 24/7 vibe is unmatched.",
+    quote: "Hands down the best gaming lounge in the city. The snooker baize is immaculate and the gaming vibe is unmatched.",
     author: "Rohan V.",
     tag: "Verified Member • 8-Ball League Champ",
   },
@@ -89,11 +89,10 @@ export default function WhyUsPage() {
   return (
     <div className="relative min-h-screen bg-void text-white">
       <PageHeader
-        sectionNum="SEC.06"
         tag="WHY THE GAMING LOFT"
         title="Why We Stand"
         highlight="Unrivaled"
-        description="Anyone can buy a cheap billiard table. We engineered a premier sports and gaming institution built on pro equipment, spotless hospitality, and non-stop 24/7 energy."
+        description="Anyone can buy a cheap billiard table. We engineered a premier sports and gaming institution built on pro equipment, spotless hospitality, and electric community energy."
       />
 
       {/* 5 Expanded Pillars */}

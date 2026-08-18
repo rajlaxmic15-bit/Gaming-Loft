@@ -10,12 +10,11 @@ export default function Arena() {
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <SectionHead
-          kicker="SEC.03 — GAMING ARENA"
           lines={["The arena", "is waiting."]}
           right={
-            <p className="font-hud max-w-sm text-sm leading-relaxed text-white/50">
-              4,000 sq. ft. of pure competition. Every table is tournament-grade, every
-              screen is calibrated, every night is electric.
+            <p className="font-hud max-w-sm text-sm leading-relaxed text-white">
+              A comfortable place to play, compete, and spend time with friends, with
+              quality equipment and everything set up to keep the focus on the game.
             </p>
           }
         />

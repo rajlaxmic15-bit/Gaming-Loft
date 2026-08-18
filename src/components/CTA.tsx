@@ -5,8 +5,33 @@ import { Corners, Marquee, Reveal } from "./ui";
 export default function CTA() {
   const [sent, setSent] = useState(false);
 
-  const submit = (e: FormEvent) => {
+  const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = (formData.get("name") as string) || "";
+    const phone = (formData.get("phone") as string) || "";
+    const game = (formData.get("game") as string) || "pool";
+    const date = (formData.get("date") as string) || "";
+    const time = (formData.get("time") as string) || "";
+
+    const selectedGameObj = GAMES.find((g) => g.id === game);
+    const gameName = selectedGameObj ? selectedGameObj.name : game.toUpperCase();
+
+    const message =
+      `*🎮 NEW SLOT RESERVATION — THE GAMING LOFT*\n\n` +
+      `*👤 Player Details:*\n` +
+      `• *Full Name:* ${name.trim()}\n` +
+      `• *Phone / WhatsApp Number:* ${phone.trim()}\n\n` +
+      `*🕹️ Booking Information:*\n` +
+      `• *Selected Game Arena:* ${gameName}\n` +
+      (date ? `• *Booking Date:* ${date}\n` : "") +
+      (time ? `• *Preferred Time Slot:* ${time}\n` : "") +
+      `\nPlease confirm my slot reservation. Thank you!`;
+
+    const receivingNumber = "917620969566";
+    const whatsappUrl = `https://wa.me/${receivingNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setSent(true);
   };
 
@@ -35,40 +60,32 @@ export default function CTA() {
           {/* left — giant heading */}
           <div className="flex flex-col items-start justify-center text-left">
             <Reveal>
-              <p className="font-hud text-neon text-xs tracking-[0.5em] uppercase md:text-sm">
-                <span className="text-neon/60">[ </span>SEC.07 — FINAL CALL<span className="text-neon/60"> ]</span>
-              </p>
-              <h2 className="font-display mt-5 text-[17vw] leading-[0.85] text-white uppercase sm:text-8xl md:text-9xl lg:text-[10rem]">
-                Ready
-                <br />
-                to <span className="text-neon glow-cyan glitch">play?</span>
+              <h2 className="font-display text-[13.5vw] leading-[0.95] text-white uppercase sm:text-7xl md:text-8xl lg:text-9xl">
+                <span className="block pb-2 sm:pb-3 md:pb-4">Ready</span>
+                <span className="block">
+                  to <span className="text-neon glow-cyan glitch">play?</span>
+                </span>
               </h2>
-              <p className="font-hud mt-7 max-w-md text-sm leading-relaxed text-white/55 md:text-base">
+              <p className="font-hud mt-7 max-w-md text-sm leading-relaxed text-white md:text-base">
                 Tables are booking fast. Reserve your slot in the next 30 seconds and
                 your first drink is on the house — <span className="text-neon">no code needed.</span>
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+918262859258"
                   className="clip-btn inline-flex items-center gap-3 bg-ember px-10 py-5 font-hud text-xs font-bold tracking-[0.35em] text-[#1a0700] uppercase transition-all duration-300 glow-box-ember hover:bg-white md:text-sm"
                 >
                   Book Your Game
-                </a>
-                <a
-                  href="tel:+919876543210"
-                  className="clip-btn inline-flex items-center gap-3 border border-white/25 px-10 py-5 font-hud text-xs font-bold tracking-[0.35em] text-white uppercase transition-all duration-300 hover:border-neon hover:text-neon md:text-sm"
-                >
-                  +91 98765 43210
                 </a>
               </div>
 
               {/* info row */}
               <div className="mt-12 grid w-full max-w-lg grid-cols-2 gap-4">
                 {[
-                  ["LOCATION", "2nd Floor, Cyber Hub, MG Road"],
-                  ["HOURS", "Open 24/7 — all year"],
-                  ["INSTAGRAM", "@thegamingloft.in"],
-                  ["EMAIL", "play@thegamingloft.in"],
+                  ["LOCATION", "2nd Flr, Opp. Apollo Pharmacy, Khamla, Nagpur"],
+                  ["HOURS", "10:30 AM – 11:30 PM Daily"],
+                  ["INSTAGRAM", "@thegamingloft"],
+                  ["PHONE", "+91 82628 59258"],
                 ].map(([k, v]) => (
                   <div key={k} className="border-l-2 border-neon/40 pl-4">
                     <p className="font-hud text-[9px] tracking-[0.3em] text-white/35 uppercase">{k}</p>
@@ -125,6 +142,7 @@ export default function CTA() {
                     </label>
                     <input
                       required
+                      name="name"
                       placeholder="ENTER YOUR TAG"
                       className="font-hud w-full border border-white/15 bg-panel px-4 py-3.5 text-sm text-white placeholder-white/25 outline-none transition-all focus:border-neon focus:shadow-[0_0_16px_rgba(34,242,255,0.25)]"
                     />
@@ -137,6 +155,7 @@ export default function CTA() {
                     <input
                       required
                       type="tel"
+                      name="phone"
                       placeholder="+91 00000 00000"
                       className="font-hud w-full border border-white/15 bg-panel px-4 py-3.5 text-sm text-white placeholder-white/25 outline-none transition-all focus:border-neon focus:shadow-[0_0_16px_rgba(34,242,255,0.25)]"
                     />
@@ -149,7 +168,7 @@ export default function CTA() {
                     <div className="grid grid-cols-5 gap-2">
                       {GAMES.map((g) => (
                         <label key={g.id} className="group cursor-pointer">
-                          <input type="radio" name="game" defaultChecked={g.id === "pool"} className="peer sr-only" />
+                          <input type="radio" name="game" value={g.id} defaultChecked={g.id === "pool"} className="peer sr-only" />
                           <span className="font-hud flex h-12 items-center justify-center border border-white/15 bg-panel text-[10px] font-bold tracking-wider text-white/50 uppercase transition-all duration-300 peer-checked:border-neon peer-checked:bg-neon/10 peer-checked:text-neon hover:border-neon/60">
                             {g.name.slice(0, 3)}
                           </span>
@@ -166,6 +185,7 @@ export default function CTA() {
                       <input
                         required
                         type="date"
+                        name="date"
                         className="font-hud w-full border border-white/15 bg-panel px-4 py-3.5 text-sm text-white outline-none transition-all focus:border-neon [color-scheme:dark]"
                       />
                     </div>
@@ -176,6 +196,7 @@ export default function CTA() {
                       <input
                         required
                         type="time"
+                        name="time"
                         className="font-hud w-full border border-white/15 bg-panel px-4 py-3.5 text-sm text-white outline-none transition-all focus:border-neon [color-scheme:dark]"
                       />
                     </div>

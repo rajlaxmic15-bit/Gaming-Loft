@@ -9,10 +9,9 @@ export default function Pricing() {
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <SectionHead
-          kicker="SEC.04 — PRICING"
           lines={["Choose your", "battle pass."]}
           right={
-            <p className="font-hud max-w-sm text-sm leading-relaxed text-white/50">
+            <p className="font-hud max-w-sm text-sm leading-relaxed text-white">
               HUD-style rates, zero hidden fees. Every plan includes full locker access,
               pro-grade gear and instant table availability.
             </p>

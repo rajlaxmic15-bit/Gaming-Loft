@@ -47,7 +47,6 @@ export default function GalleryPage() {
   return (
     <div className="relative min-h-screen bg-void text-white">
       <PageHeader
-        sectionNum="SEC.05"
         tag="PHOTO VAULT"
         title="Inside The"
         highlight="Real Loft"

@@ -41,7 +41,7 @@ const ARENA_ZONES = [
 const ARENA_COMPARISON = [
   { feature: "Floor Space", loft: "4,000 Sq. Ft. Dedicated Layout", standard: "Cramped 800-1200 Sq. Ft." },
   { feature: "Air Conditioning", loft: "Central High-CFM Industrial Chillers", standard: "Wall split ACs / Stuffy" },
-  { feature: "Operating Hours", loft: "24 Hours / 7 Days a Week", standard: "Closes at 10 PM - 11 PM" },
+  { feature: "Operating Hours", loft: "Daily Extended Hours", standard: "Closes at 10 PM - 11 PM" },
   { feature: "Cue & Gear Quality", loft: "Aramith Pro Balls & Carbon Shafts", standard: "Warped house cues & cheap felt" },
   { feature: "Display Calibrations", loft: "65\" OLED 120Hz Low Latency", standard: "60Hz basic consumer TVs" },
   { feature: "Food & Drinks", loft: "Craft cafe with table service", standard: "Only bottled water / vending" },
@@ -54,7 +54,6 @@ export default function ArenaPage() {
   return (
     <div className="relative min-h-screen bg-void text-white">
       <PageHeader
-        sectionNum="SEC.03"
         tag="THE ARENA FLOOR"
         title="4,000 Sq. Ft. Of"
         highlight="Pure Combat"
